@@ -5,15 +5,23 @@ import './App.css';
 
 class ExpObject{
     constructor() {
-        this.expObject = {'Anger': '', 'Fear': '', 'Disgust': '', 'Happiness':'', 'Sadness':'', 'Surprise':'','Contempt':'' }
+        this.expObjects = {expOne: [], expTwo: [], expThree: []};
         
     }
     
-    addAngerPerception(perception){
-        this.expObject.Anger = perception;
-    };
-    
-    /* add method for every perception or create general case */
+    addEmotionObject(expNumber, emotionObject){
+        if (expNumber == 1){
+            this.expObjects.expOne.push(emotionObject);
+
+        }else if (expNumber == 2){
+            this.expObjects.expTwo.push(emotionObject);
+
+        }else if (expNumber == 3){
+            this.expObjects.expThree.push(emotionObject);
+
+        }
+    }
+     
 }
 
 export default ExpObject;
